@@ -1,0 +1,60 @@
+﻿@model kodalanim.JobSeeker
+@{
+    Layout = null;
+    ViewData["Title"] = "Profil";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - JobArea</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/_4._07._23_2_.styles.css" asp-append-version="true" />
+</head>
+<body>
+<p>DogruGiris-Aday Sayfası</p>
+
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+            
+            <p><button class="button" style="margin-left:200px">        
+                         @Html.ActionLink("İş ara","IndexNew","Kontrol")
+               </button>
+                </p>
+            </div> 
+
+    </nav>
+</header>
+    <h1 style="font-style:initial; margin-left:10px">Bilgilerim</h1>
+
+    <div>
+
+        <p style="margin-left:20px">
+           - @Html.DisplayFor(model=>Model.Ad) &nbsp;
+
+            @Html.DisplayFor(model=>Model.Soyad)<br />
+
+            - @Html.DisplayFor(model=>Model.Telno)<br />
+            - @Html.DisplayFor(model=>Model.Mail)<br />
+            - @Html.DisplayFor(model=>Model.Sehir)
+            - @Html.DisplayFor(model=>Model.Ilce)<br />
+            - @Html.DisplayFor(model=>Model.EgitimSeviyesi)
+        </p>
+      
+        @*<label asp-for="@Model.Ad"></label>
+        <label asp-for="@Model.Soyad"></label>
+        <label asp-for="@Model.Mail"></label>*@
+
+       </div>
+
+    <div style="margin-left:600px">
+        <button>Bilgerimde değişiklik yap </button>
+    </div>    
+
+</body>
+</html>

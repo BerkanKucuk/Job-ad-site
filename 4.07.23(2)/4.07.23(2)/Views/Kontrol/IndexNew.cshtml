@@ -1,0 +1,47 @@
+﻿@model IEnumerable<kodalanim.Ilan>
+@{
+    ViewData["Title"] = "IndexNew";
+}
+
+<h1>IndexNew</h1>
+
+<table class="table">
+@foreach(var item in Model){
+    <tr>
+        <th>
+    @Html.DisplayFor(modelitem=>item.Aciklama);    
+        </th>
+
+        <th>
+    @Html.DisplayFor(modelitem=>item.CalismaTuru.Ad);   
+        </th>
+
+        <th>
+    @Html.DisplayFor(modelitem=>item.Firma.Ad);
+        </th>
+
+        <th>
+    @Html.DisplayFor(modelitem=>item.FirmaWebSite);
+        </th>
+
+        <th>
+    @Html.DisplayFor(modelitem=>item.Deneyim.Ad);
+        </th>
+
+        <th>
+    @Html.DisplayFor(modelitem=>item.Egitimseviyesi);
+        </th>
+
+        <th>
+    @Html.DisplayFor(modelitem=>item.GetDate);
+        </th>
+
+        <th>
+    @Html.DisplayFor(modelitem=>item.Maaş);
+        </th>
+
+    </tr>
+
+
+};
+    </table>

@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewData["Title"] = "Uyelik";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+
+    <script>
+
+        $(function () {
+
+            var $ad= $('#ad');
+            var $soyad: $('#soyad');
+            var $mail: $('');
+            var $telno:$('');
+            var $sehir:$('');
+            var $ilçe: $('');
+            var $dogumtarihi: $('');
+            var $egitimseviyesi: $('');
+            var $cinsiyet: $('');
+            var $Kullanıcı sifresi: $('');
+
+
+
+        $('#add-jobseeker').on('click',function()){
+
+            var order={
+                ad:
+                soyad:
+                mail:
+                telno:
+                sehir:
+                ilçe:
+                dogumtarihi:
+                egitimseviyesi:
+                cinsiyet:
+                Kullanıcı sifresi:
+            }
+            
+        });
+        
+      });
+
+        
+    </script>
+
+</head>
+<body>
+
+    <p>ad: <input type="text" id="ad"/></p>
+    <p>soyad: <input type ="text" id="soyad" /></p>
+    <p>mail: <input type="text" id="mail"/></p>
+    <p>telno: <input type ="text" id="telno" /></p>
+    <p>sehir: <input type="text" id="sehir"/></p>
+    <p>ilçe: <input type ="text" id="ilce" /></p>
+    <p>dogumtarihi: <input type="text" id="dogumtarihi" /></p>
+    <p>egitimseviyesi: <input type="text" id="egitimseviyesi" /></p>
+    <p>cinsiyet: <input type="text" id="cinsiyet" /></p>
+    <p>Kullanıcı sifresi: <input type="text" id="Kullanıcı-sifresi" /></p>
+    <button id="add-jobseeker">Add!</button>
+
+    
+</body>
+</html>
+

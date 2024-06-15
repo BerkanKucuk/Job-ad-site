@@ -1,0 +1,95 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+
+    <script>
+        //function LoadEmployees() {
+
+        //    var ul = $("ilans");
+        //    ul.empty();
+        //    $.ajax({
+        //        method: "Get",
+        //        url: "https://localhost:7107/api/IlansAPI"
+        //    }).done(function (response) {
+        //        //console.log(response);
+
+        //        if (response == null)
+        //            return;
+
+        //        for (var i = 0; i < response.length; i++) {
+        //            var emp = response[i];
+        //            var li = $("<li class='list-group-item'>" + emp.aciklama + " " + emp.deneyimId +
+        //                "(Gender : " + emp.egitimseviyesi + " - Salary : " + emp.firmawebsite + "$)</li>")
+
+        //            ul.append(li);
+        //        }
+        //    }).fail(function () {
+        //        alert("Hata oluştu.")
+        //    });
+        //}
+        //$(function () {
+        //    LoadEmployees();
+        //});
+      //-----------------------------------
+        //function Getİlanlar(){
+        //    var html = [];
+        //    $.getJSON("https://localhost:7107/api/IlansAPI",function(data){
+
+        //        $.each(data,function(key,value){
+        //            $("p").hide();
+        //            html.push("<label class='label label-success'>" + value.aciklama + "</label>");
+
+        //        });
+
+        //        $("#ilan").empty().append(html);
+        //    });
+        //}
+        //---------------------------
+
+        $   function(){
+            var $ilanlar = $('#ilanlar');
+
+            $.ajax({
+                type: "Get",
+                url: "https://localhost:7107/api/IlansAPI",
+                success:function(ilanlar){
+                    console.log('success',ilanlar);
+                    $.each(ilanlar,function(i,ilan){
+                        $ilanlar.append('<li>İlan aciklamasi:  '+ilan.aciklama + ',  maaş:   ' +ilan.maaş +
+                            '  Deneyim:  ' + ilan.deneyim.ad + ',  tarih:   ' + ilan.getDate + '   egitimseviyesi:  ' + ilan.egitimseviyesi+
+                            '  Firma:   ' + ilan.firma.ad + '  website:   ' + ilan.firmaWebSite + '   CalismaTürü:   ' + ilan.calismaTuru.ad+
+                        '</li>');
+                    });
+                }
+           });
+        });
+           
+
+    </script>
+</head>
+<body>
+    <h1>Ilanview</h1>
+    <div class="col-md-6">
+
+        <p id= "ilan"></p>
+        <p>akjkasjf</p>
+        <ul id="ilanlar"></ul>
+           
+    </div>
+        
+    @*<p id="test">This is some <b>bold</b> text in a paragraph.</p>
+    <button id="btn1">Show Text</button>
+    <button id="btn2">Show HTML</button>*@
+
+</body>
+
+</html>

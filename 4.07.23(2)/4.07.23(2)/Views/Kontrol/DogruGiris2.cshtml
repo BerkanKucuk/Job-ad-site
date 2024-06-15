@@ -1,0 +1,36 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "Profil";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - JobArea</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/_4._07._23_2_.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <p>DogruGiris-İş Sahibi Sayfası</p>
+
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+
+                <p>
+                    <button class="button" style="margin-left:200px">
+                        @Html.ActionLink("İlan oluştur","CreateIlan","Kontrol")
+                    </button>
+                </p>
+            </div>
+
+        </nav>
+    </header>
+
+    <h1>Bilgilerim</h1>
+</body>
+</html>
